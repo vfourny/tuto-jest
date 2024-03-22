@@ -5,8 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node ./src/index.js",
+    "db:init": "node db/init.db.js",
     "test": "jest",
-    "postinstall": "node db/init.db.js"
+    "postinstall": "npm run db:init"
   },
   "author": "Valentin FOURNY",
   "license": "ISC",

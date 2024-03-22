@@ -2,7 +2,9 @@
 const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('db/database.sqlite');
 
-db.serialize().run(`CREATE TABLE IF NOT EXISTS movies (
+db.run(`DROP TABLE IF EXISTS movies`)
+
+db.run(`CREATE TABLE IF NOT EXISTS movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL, 
   director TEXT NOT NULL, 
